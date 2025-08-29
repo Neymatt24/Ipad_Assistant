@@ -1155,7 +1155,9 @@ if __name__ == "__main__":
     if not Config.GROQ_API_KEY or not Config.TAVILY_API_KEY:
         raise ValueError("API keys for GROQ and TAVILY must be set in .env file")
     
-    # Start the FastAPI server
-if __name__ == "__main__":
+    # Get port from environment (for deployment) or use default
     port = int(os.getenv("PORT", 8003))
+    
+    # Start the FastAPI server
     uvicorn.run("main:app", host="0.0.0.0", port=port, log_level="info")
+
