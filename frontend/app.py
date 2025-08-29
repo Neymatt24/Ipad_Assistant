@@ -222,7 +222,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- API Configuration ---
-FASTAPI_URL = os.getenv("FASTAPI_URL", "http://localhost:8003")
+FASTAPI_URL = os.getenv("FASTAPI_URL", "https://ipad-assistant-4.onrender.com")
 STREAM_ENDPOINT = f"{FASTAPI_URL}/ask-stream"
 NORMAL_ENDPOINT = f"{FASTAPI_URL}/ask"
 
@@ -490,5 +490,6 @@ st.markdown(f"""
     Messages: {len(st.session_state.messages)}
 </div>
 """, unsafe_allow_html=True)
+
 
 st.markdown('</div>', unsafe_allow_html=True)
